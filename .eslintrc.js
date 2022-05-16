@@ -17,6 +17,12 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'no-unused-vars': 'warn',
     'import/no-cycle': 'off',
     'import/no-extraneous-dependencies': [
