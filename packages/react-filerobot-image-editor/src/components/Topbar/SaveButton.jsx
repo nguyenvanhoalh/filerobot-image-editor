@@ -56,7 +56,7 @@ const SaveButton = () => {
     },
   } = state;
   const [isModalOpened, setIsModalOpened] = useState(false);
-  const [imageFileInfo, setImageFileInfo] = useState({ quality: 0.92 });
+  const [imageFileInfo, setImageFileInfo] = useState({ quality: 1.0 });
   const transformImgFn = useTransformedImgData();
   const isQualityAcceptable = ['jpeg', 'jpg', 'webp'].includes(
     imageFileInfo.extension,
