@@ -7,12 +7,12 @@
     "packages/*"
   ],
   "author": "Scaleflex",
-  "homepage": "https://github.com/scaleflex/filerobot-image-editor/#readme",
+  "homepage": "https://github.com/nguyenvanhoalh/filerobot-image-editor/#readme",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scaleflex/filerobot-image-editor"
+    "url": "https://github.com/nguyenvanhoalh/filerobot-image-editor"
   },
   "keywords": [
     "image editor",
@@ -60,12 +60,12 @@
     "lerna-update-wizard": "0.17.8",
     "prettier": "^2.4.1",
     "prettier-eslint-cli": "^5.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rimraf": "^3.0.2",
     "rollup-plugin-uglify": "^6.0.4",
     "source-map-explorer": "^2.5.2",
-    "styled-components": "5.1.0",
+    "styled-components": "^5.1.0",
     "vite": "^2.8.6"
   },
   "scripts": {
@@ -83,6 +83,10 @@
     "publish:packages": "yarn build:packages && lerna publish",
     "analyze:bundle": "source-map-explorer dist/filerobot-image-editor.min.js{,.map}",
     "release:beta": "yarn && yarn publish:packages --dist-tag beta && yarn publish:js-bundle beta",
-    "release:prod": "yarn && yarn publish:packages && yarn publish:js-bundle latest && yarn release:gh-pages"
+    "release:prod": "yarn && yarn publish:packages && yarn publish:js-bundle latest && yarn release:gh-pages",
+    "mrhoa": "yarn build:packages && yarn build:js-bundle"
+  },
+  "dependencies": {
+    "@scaleflex/icons": "^1.0.0-beta.87"
   }
 }
